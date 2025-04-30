@@ -105,15 +105,17 @@ ScrollReveal().reveal(".btn-large", {
   delay: 600,
 });
 
-ScrollReveal().reveal(".footer__content p", {
-  ...scrollRevealOption,
-  origin: "left",
-  delay: 300,
-});
+if (window.innerWidth > 768) {
+  ScrollReveal().reveal(".footer__content p", {
+    ...scrollRevealOption,
+    origin: "left",
+    delay: 300,
+  });
 
-ScrollReveal().reveal(".footer__socials a", {
-  ...scrollRevealOption,
-  origin: "bottom",
-  delay: 600,
-  interval: 300,
-});
+  ScrollReveal().reveal(".footer__socials a", {
+    ...scrollRevealOption,
+    origin: "bottom",
+    delay: 600,
+    interval: 300,
+  });
+}
