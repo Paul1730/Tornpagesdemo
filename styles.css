@@ -311,14 +311,17 @@ body {
 }
 
 .cta {
-  padding: 5rem 1rem;
+  padding: 5rem 1rem 3rem; /* agregamos espacio inferior */
   background-color: var(--primary-color);
   text-align: center;
+  overflow: hidden;
 }
 
 .cta__content {
   max-width: 800px;
   margin: auto;
+  padding-bottom: 2rem; /* espacio para evitar que el botón se corte */
+  min-height: 300px;
 }
 
 .cta__content h2 {
@@ -354,6 +357,13 @@ body {
   .btn-large {
     padding: 1rem 2rem;
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .btn-large {
+    font-size: 1rem;
+    padding: 1rem 2rem;
   }
 }
 
@@ -518,4 +528,9 @@ body {
   .cta__images {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
 }
