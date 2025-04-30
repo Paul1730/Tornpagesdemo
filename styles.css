@@ -388,18 +388,25 @@ body {
 }
 
 .footer__socials {
-  display: flex;
-  gap: 1rem; /* Un poco más pequeño el espacio entre íconos */
+  display: flex !important;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .footer__socials a {
-  font-size: 1.3rem; /* Íconos sociales un poco más pequeños */
+  display: inline-block !important;
+  font-size: 1.5rem;
   color: var(--primary-color);
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
 .footer__socials a:hover {
   color: var(--white);
+}
+
+.footer__content {
+  overflow: visible !important;
 }
 
 /* Responsive */
