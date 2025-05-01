@@ -75,8 +75,8 @@ window.addEventListener('scroll', () => {
 
   if (!started && sectionTop < screenHeight - 100) {
     started = true;
-    let count = 0;
-    const target = 1500;
+    let count = 15000;
+    const target = 20000;
     const speed = 25; // más lento
     const increment = 5; // sube de 5 en 5
 
@@ -86,7 +86,7 @@ window.addEventListener('scroll', () => {
         counter.textContent = "+" + count.toLocaleString();
         setTimeout(updateCounter, speed);
       } else {
-        counter.textContent = "+1,500";
+        counter.textContent = "+20,000";
       }
     };
 
