@@ -541,3 +541,81 @@ html, body {
   overflow-x: hidden;
   width: 100%;
 }
+
+.partners {
+  padding: 5rem 1rem;
+  background-color: var(--white);
+  text-align: center;
+  overflow: hidden;
+}
+
+.partners h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 2rem;
+}
+
+.partners__carousel {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.partners__track {
+  display: flex;
+  gap: 3rem;
+  width: calc(10 * 120px); /* 10 imágenes aprox. de 120px de ancho (ajustable) */
+  animation: scrollLogos 20s linear infinite;
+}
+
+.partners__track img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+  filter: grayscale(100%);
+  opacity: 0.8;
+  transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+.partners__track img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+@keyframes scrollLogos {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .partners h2 {
+    font-size: 2rem;
+  }
+
+  .partners__track {
+    gap: 2rem;
+    animation-duration: 15s;
+  }
+
+  .partners__track img {
+    height: 40px;
+  }
+}
+
+.partners__track {
+  display: flex;
+  gap: 3rem;
+  animation: scrollLogos 30s linear infinite;
+  width: max-content;
+}
+
+.partners__carousel:hover .partners__track {
+  animation-play-state: paused;
+}
