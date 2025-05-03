@@ -619,3 +619,32 @@ html, body {
 .partners__carousel:hover .partners__track {
   animation-play-state: paused;
 }
+
+/* Mapa */
+
+.global-impact {
+  padding: 5rem 1rem;
+  background-color: var(--white); /* Fondo blanco puro */
+  text-align: center;
+}
+
+.global-impact .impact__content {
+  max-width: 1000px;
+  margin: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.global-impact h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 2rem;
+}
+
+#map {
+  width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  z-index: 1;
+}
