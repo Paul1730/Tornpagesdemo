@@ -119,3 +119,24 @@ if (window.innerWidth > 768) {
     interval: 300,
   });
 }
+
+// Mapa 
+const map = L.map('map', {
+  scrollWheelZoom: false, // 👈 Esto desactiva el zoom al hacer scroll
+}).setView([20, 0], 2);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '© OpenStreetMap contributors'
+}).addTo(map);
+
+// Ejemplo de países con presencia:
+const countries = [
+  { name: "United States", coords: [37.8, -96.9] },
+  { name: "El Salvador", coords: [13.7, -89.2] },
+  { name: "India", coords: [21.1, 78.9] },
+  { name: "Rwanda", coords: [-1.94, 29.87] },
+];
+
+countries.forEach(c => {
+  L.marker(c.coords).addTo(map).bindPopup(`<b>${c.name}</b>`);
+});
