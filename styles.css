@@ -564,13 +564,14 @@ html, body {
 
 .partners__track {
   display: flex;
+  justify-content: center;
   gap: 3rem;
-  width: calc(10 * 120px); /* 10 imágenes aprox. de 120px de ancho (ajustable) */
-  animation: scrollLogos 20s linear infinite;
+  width: 100%;
+  flex-wrap: wrap;
 }
 
 .partners__track img {
-  height: 60px;
+  height: 120px; /* Aumentado desde 60px */
   width: auto;
   object-fit: contain;
   flex-shrink: 0;
@@ -584,41 +585,14 @@ html, body {
   opacity: 1;
 }
 
-@keyframes scrollLogos {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-/* Responsive */
+/* Responsive: ajustar tamaño en pantallas pequeñas */
 @media (max-width: 768px) {
-  .partners h2 {
-    font-size: 2rem;
-  }
-
-  .partners__track {
-    gap: 2rem;
-    animation-duration: 15s;
-  }
-
   .partners__track img {
-    height: 40px;
+    height: 100px; /* Aumentado desde 40px */
   }
 }
 
-.partners__track {
-  display: flex;
-  gap: 3rem;
-  animation: scrollLogos 30s linear infinite;
-  width: max-content;
-}
 
-.partners__carousel:hover .partners__track {
-  animation-play-state: paused;
-}
 
 /* Mapa */
 
