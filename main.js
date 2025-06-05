@@ -105,6 +105,13 @@ ScrollReveal().reveal(".btn-large", {
   delay: 600,
 });
 
+ScrollReveal().reveal(".partners__track img", {
+  ...scrollRevealOption,
+  interval: 200,     // Tiempo entre cada logo
+  delay: 400,        // Espera antes de empezar
+  origin: "bottom",  // Dirección de entrada
+});
+
 if (window.innerWidth > 768) {
   ScrollReveal().reveal(".footer__content p", {
     ...scrollRevealOption,
